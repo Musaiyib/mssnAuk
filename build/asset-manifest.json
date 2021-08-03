@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a617e044.chunk.css",
+    "main.js": "/static/js/main.20bee88f.chunk.js",
+    "main.js.map": "/static/js/main.20bee88f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.409058b7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.409058b7.js.map",
+    "static/js/2.8434f4ed.chunk.js": "/static/js/2.8434f4ed.chunk.js",
+    "static/js/2.8434f4ed.chunk.js.map": "/static/js/2.8434f4ed.chunk.js.map",
+    "static/js/3.c9cc8391.chunk.js": "/static/js/3.c9cc8391.chunk.js",
+    "static/js/3.c9cc8391.chunk.js.map": "/static/js/3.c9cc8391.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.8434f4ed.chunk.js.LICENSE.txt": "/static/js/2.8434f4ed.chunk.js.LICENSE.txt",
+    "static/media/auk.76c188d8.png": "/static/media/auk.76c188d8.png",
+    "static/media/mssn-auk-logo.599d11fa.jpeg": "/static/media/mssn-auk-logo.599d11fa.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.409058b7.js",
+    "static/js/2.8434f4ed.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.20bee88f.chunk.js"
+  ]
+}
