@@ -53,8 +53,9 @@ import QrLogo from './img/QrLogo'
             alignItems: "center",
             width: 400,
         },
-        recieptContect:{
+        recieptContent:{
             // marginTop:
+            position: 'relative',
             // float: 'left',
         },
         line:{
@@ -75,8 +76,16 @@ import QrLogo from './img/QrLogo'
         recieptDetailSpan: {
             color: "black",
             marginLeft: 8,
+            fontWeight: 400,
+            fontFamily: 'Helvetica Neue',
         },
-        
+        waterMarkLogo: {
+            position: 'absolute',
+            top: 120,
+            // opacity: 0.25,
+            // right: -15,
+            zIndex: -1,
+        }
     }));
 
 const Reciept = () => {
@@ -123,12 +132,7 @@ const Reciept = () => {
         //         showClass: {
         //           popup: 'animate__animated animate__fadeInDown'
         //         },
-        //         hideClass: {
-        //           popup: 'animate__animated animate__fadeOutUp'
-        //         }
-        //     }, document.getElementById('inputRegNo').focus())
-        //         return
-        //     }
+        //         hideClassstatic
 
         
 
@@ -189,22 +193,26 @@ const Reciept = () => {
         <main>
             <Grid style={{ justifyContent: "center" }} container >
                 <Grid item x1={2} lg={4} md={6} sm={8} xs={12} className={classes.gridContainer} style={{}} >
-                    <Paper elevation={3} className={classes.paper}>
-                        <div className={classes.logoContainer}>
-                            <img src={mssnLogo} className={classes.logoImg} alt="mssnLogo" width="65" height="65" />
-                        </div>
-                        <div className={classes.recieptContect}>
-                            <Typography variant="h6" className={classes.recieptTitle} >Transaction Reciept</Typography>
-                            <hr className={classes.line} />
-                            <div className={classes.recieptDetails}>
-                            <h5 className={classes.recieptDetailH5} >Transaction Date: <span className={classes.recieptDetailSpan}>12:32 18/8/2020</span></h5>
-                            <h5 className={classes.recieptDetailH5} >Reference Number: <span className={classes.recieptDetailSpan}>3382844544312345</span></h5>
-                            <h5 className={classes.recieptDetailH5} >Amount: <span className={classes.recieptDetailSpan}>₦ 500.00</span></h5>
-                            <h5 className={classes.recieptDetailH5} >Amount In Words: <span className={classes.recieptDetailSpan}>Five Hundred Naira Only</span></h5>
-                            <h5 className={classes.recieptDetailH5} >Transaction Status: <span className={classes.recieptDetailSpan}>Success</span></h5>
+                    <Paper elevation={6} className={classes.paper}>
+                        {/* <div> */}
+                            {/* <div className={classes.logoContainer}>
+                                <img src={mssnLogo} className={classes.logoImg} alt="mssnLogo" width="65" height="65" />
+                            </div> */}
+                            <img src={mssnLogo} className={classes.titleLogo} alt="mssnLogo" width="70" height="70" />
+                            <div className={classes.recieptContent}>
+                                <Typography variant="h6" className={classes.recieptTitle} >Transaction Reciept</Typography>
+                                <hr className={classes.line} />
+                                <div className={classes.recieptDetails}>
+                                <h5 className={classes.recieptDetailH5} >Transaction Date: <span className={classes.recieptDetailSpan}>12:32 18/8/2020</span></h5>
+                                <h5 className={classes.recieptDetailH5} >Reference Number: <span className={classes.recieptDetailSpan}>3382844544312345</span></h5>
+                                <h5 className={classes.recieptDetailH5} >Amount: <span className={classes.recieptDetailSpan}>₦ 500.00</span></h5>
+                                <h5 className={classes.recieptDetailH5} >Amount In Words: <span className={classes.recieptDetailSpan}>Five Hundred Naira Only</span></h5>
+                                <h5 className={classes.recieptDetailH5} >Transaction Status: <span className={classes.recieptDetailSpan}>Success</span></h5>
+                                <img src={mssnLogo} className={classes.waterMarkLogo} alt="mssnLogo" width="70" height="70" />
+                                </div>
+                                <img src={QrLogo} alt="Qrcode" width="150" height="150" />
                             </div>
-                            <img src={QrLogo} alt="Qrcode" width="150" height="150" />
-                        </div>
+                        {/* </div> */}
                     </Paper>
                 </Grid>
             </Grid>
