@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Button, Typography, Grid, Paper} from "@material-ui/core";
 // import { Redirect } from 'react-router-dom';
 import { } from "react-icons/ri";
+import ReactImageProcess from 'react-image-process';
 import mssnLogo from './img/mssn-auk-logo.jpeg'
 import Swal from 'sweetalert2';
 import QrLogo from './img/QrLogo'
@@ -69,6 +70,8 @@ import QrLogo from './img/QrLogo'
         recieptDetails: {
             marginLeft: 58,
             textAlign: "left",
+            position: 'absolute',
+            zIndex: 1,
         },
         recieptDetailH5: {
             color: "#1b5e20",
@@ -77,23 +80,29 @@ import QrLogo from './img/QrLogo'
             color: "black",
             marginLeft: 8,
             fontWeight: 400,
-            fontFamily: 'Helvetica Neue',
+            letterSpacing: 0.5,
+            fontFamily: 'Oxygen',
         },
         waterMarkLogo: {
             position: 'absolute',
-            top: 120,
-            // opacity: 0.25,
-            // right: -15,
-            zIndex: -1,
+            top: 90,
+            // display: 'flex',
+            // justifyContent: 'center',
+            // alignItems: 'center',
+            opacity: 0.25,
+        },
+        Qr: {
+            // position: 'absolute',
+            // textAlign: 'center',
+            marginTop: 220,
+        },
+        titleLogo: {
+            marginTop: 20,
         }
     }));
 
 const Reciept = () => {
-    const [name, setName] = useState('')
-    const [regNo, setRegNo] = useState('')
-    const [select, setSelect] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
+    // const [name, setName] = useState('')
 
     // const initializePayment = usePaystackPayment(config)
     const classes = useStyles();
@@ -122,71 +131,8 @@ const Reciept = () => {
         //       }, document.getElementById('inputName').focus())
         //     return
         // }
-
-        // //Regno validation
-        // if (inputRegNo.length <= 14 || inputRegNo.length >= 16) {
-        //     Swal.fire({
-        //         title: 'Error',
-        //         text: 'Please enter a valid Registration number',
-        //         icon: 'error',
-        //         showClass: {
-        //           popup: 'animate__animated animate__fadeInDown'
-        //         },
-        //         hideClassstatic
-
         
-
-                
-        // //Email validation
-        // // if () {
-        // //     alert('please enter a valid Registration number')
-        // //     // inputRegNo.focus()
-        // //     return
-        // // }
-
-        // //Phone number validation
-        // if (inputPhone.length <= 10 ||inputPhone.length >= 12) {
-        //     Swal.fire({
-        //         title: 'Error',
-        //         text: 'Please enter a valid phone number (Eg. 07082838485)',
-        //         icon: 'error',
-        //         showClass: {
-        //           popup: 'animate__animated animate__fadeInDown'
-        //         },
-        //         hideClass: {
-        //           popup: 'animate__animated animate__fadeOutUp'
-        //         }   
-        //       }, document.getElementById('inputPhone').focus())
-        //     return
-        // }
-
-        // //select validation
-        // if (inputSelect === '') {
-        //     Swal.fire({
-        //         title: 'Error',
-        //         text: 'Please select your department',
-        //         icon: 'error',
-        //         showClass: {
-        //           popup: 'animate__animated animate__fadeInDown'
-        //         },
-        //         hideClass: {
-        //           popup: 'animate__animated animate__fadeOutUp'
-        //         }   
-        //       }, document.getElementById('selectId').focus())
-        //     return
-        // }
-        // if(status === true){
-        //     swal("Thanks for your payment!", "Please print invoice  your reciept!", "success");
-        // }else{
-        //     swal("We encounter some error in your payment!", "Please try again!", "error");
-        //     setSatus(true)
-        // }
-        
-        console.log(name)
-        console.log(regNo)
-        console.log(select)
-        console.log(email)
-        console.log(phone)
+        // console.log(name)
     }
 
     return (
@@ -208,9 +154,9 @@ const Reciept = () => {
                                 <h5 className={classes.recieptDetailH5} >Amount: <span className={classes.recieptDetailSpan}>₦ 500.00</span></h5>
                                 <h5 className={classes.recieptDetailH5} >Amount In Words: <span className={classes.recieptDetailSpan}>Five Hundred Naira Only</span></h5>
                                 <h5 className={classes.recieptDetailH5} >Transaction Status: <span className={classes.recieptDetailSpan}>Success</span></h5>
-                                <img src={mssnLogo} className={classes.waterMarkLogo} alt="mssnLogo" width="70" height="70" />
                                 </div>
-                                <img src={QrLogo} alt="Qrcode" width="150" height="150" />
+                                <img src={mssnLogo} className={classes.waterMarkLogo} alt="mssnLogo" width="150" height="150" />
+                                <img src={QrLogo} alt="Qrcode" className={classes.Qr} width="130" height="130" />
                             </div>
                         {/* </div> */}
                     </Paper>

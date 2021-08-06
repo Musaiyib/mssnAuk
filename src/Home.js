@@ -165,7 +165,7 @@ const Home = () => {
                 </Grid> */}
                 
                 <Grid item x1={2} lg={4} md={6} sm={8} xs={12} className={classes.gridContainer} style={{}} >
-                    <Paper elevation={3} className={classes.paper} style={{ padding: 20, paddingLeft: 80, paddingRight: 80}}>
+                    <Paper elevation={6} className={classes.paper} style={{ padding: 20, paddingLeft: 80, paddingRight: 80}}>
                         <form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
                             <Typography variant="h6" color="primary" className={classes.formHeading} style={{marginTop: 10, marginBottom: 6}}>Pay Your MSSN Tax</Typography>
                             <br />
